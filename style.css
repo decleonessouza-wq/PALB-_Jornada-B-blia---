@@ -1,3 +1,6 @@
+/* =========================
+   BASE
+========================= */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -12,6 +15,14 @@ header {
   text-align: center;
 }
 
+/* =========================
+   HOME
+========================= */
+#home {
+  max-width: 900px;
+  margin: auto;
+}
+
 .user {
   display: flex;
   gap: 10px;
@@ -23,6 +34,7 @@ header {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  min-width: 200px;
 }
 
 .user button {
@@ -34,12 +46,86 @@ header {
   cursor: pointer;
 }
 
+/* Versículo */
+.verse {
+  margin: 20px;
+  padding: 15px;
+  background: #ffffff;
+  border-left: 6px solid #2e7d32;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.verse strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* Botões de Trimestre */
+.trimester-buttons {
+  text-align: center;
+  padding: 20px;
+}
+
+.trimester-buttons h2 {
+  margin-bottom: 15px;
+}
+
+.trimester-buttons button {
+  display: block;
+  width: 90%;
+  max-width: 320px;
+  margin: 10px auto;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #43a047, #2e7d32);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.trimester-buttons button:hover {
+  opacity: 0.95;
+}
+
+/* =========================
+   TRIMESTRE
+========================= */
+#trimesterView {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#trimesterView header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+#trimesterView header button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+/* =========================
+   PROGRESSO
+========================= */
 .progress {
   text-align: center;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
+/* =========================
+   CALENDÁRIO
+========================= */
 #calendar {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -54,6 +140,11 @@ header {
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   cursor: pointer;
   border-left: 6px solid #2e7d32;
+  transition: transform 0.1s ease;
+}
+
+.day:hover {
+  transform: scale(1.02);
 }
 
 .day.done {
@@ -63,8 +154,12 @@ header {
 
 .day.meditar {
   border-left: 6px solid #f9a825;
+  background: #fffde7;
 }
 
+/* =========================
+   FOOTER
+========================= */
 footer {
   text-align: center;
   padding: 15px;
