@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Plano Anual de Leitura Bíblica</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2e7d32" />
+
+  <!-- Manifest PWA -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Ícones -->
+  <link rel="icon" type="image/png" href="icon.png" />
+  <link rel="apple-touch-icon" href="icon.png" />
+
+  <!-- iOS PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1> Jornada Bíblica Anual</h1>
+  <p id="welcome"></p>
+</header>
+
+<section class="user">
+  <input type="text" id="username" placeholder="Digite seu nome" />
+  <button onclick="saveUser()">Salvar</button>
+</section>
+
+<section class="progress">
+  <p id="progressText"></p>
+</section>
+
+<section id="calendar"></section>
+
+<footer>
+  PALB - ©2026 - By Decleones Andrade - <strong>JOSUÉ 1:9</strong>
+</footer>
+
+<script src="app.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
+
+</body>
+</html>
