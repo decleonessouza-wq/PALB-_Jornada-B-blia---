@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Plano Anual de Leitura B�blica</title>
+  <title>Plano Anual de Leitura Bíblica</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#2e7d32" />
@@ -10,7 +10,7 @@
   <!-- Manifest PWA -->
   <link rel="manifest" href="manifest.json" />
 
-  <!-- �cones -->
+  <!-- Ícones -->
   <link rel="icon" type="image/png" href="icon.png" />
   <link rel="apple-touch-icon" href="icon.png" />
 
@@ -23,24 +23,62 @@
 </head>
 <body>
 
-<header>
-  <h1> Jornada B�blica Anual</h1>
-  <p id="welcome"></p>
-</header>
+<!-- =========================
+     HOME / BOAS-VINDAS
+========================= -->
+<section id="home">
 
-<section class="user">
-  <input type="text" id="username" placeholder="Digite seu nome" />
-  <button onclick="saveUser()">Salvar</button>
+  <header>
+    <h1> Jornada Bíblica Anual</h1>
+    <p id="welcome"></p>
+  </header>
+
+  <section class="user">
+    <input type="text" id="username" placeholder="Digite seu nome" />
+    <button onclick="saveUser()">Salvar</button>
+  </section>
+
+  <section class="verse">
+    <strong>JOSUÉ 1:9</strong>
+    <p>
+      “Não fui eu que lhe ordenei? Seja forte e corajoso!
+      Não se apavore nem desanime, pois o Senhor, o seu Deus,
+      estará com você por onde você andar.”
+    </p>
+  </section>
+
+  <section class="trimester-buttons">
+    <h2>Escolha um Trimestre</h2>
+
+    <button onclick="openTrimester('t1')"> 1º Trimestre</button>
+    <button onclick="openTrimester('t2')"> 2º Trimestre</button>
+    <button onclick="openTrimester('t3')"> 3º Trimestre</button>
+    <button onclick="openTrimester('t4')"> 4º Trimestre</button>
+  </section>
+
 </section>
 
-<section class="progress">
-  <p id="progressText"></p>
-</section>
+<!-- =========================
+     VISÃO DO TRIMESTRE
+========================= -->
+<section id="trimesterView" style="display:none;">
 
-<section id="calendar"></section>
+  <header>
+    <button onclick="goHome()"> Voltar</button>
+    <h2 id="trimesterTitle"></h2>
+    <p id="trimesterTheme"></p>
+  </header>
+
+  <section class="progress">
+    <p id="progressText"></p>
+  </section>
+
+  <section id="calendar"></section>
+
+</section>
 
 <footer>
-  PALB - �2026 - By Decleones Andrade - <strong>JOSU� 1:9</strong>
+  PALB - ©2026 - By Decleones Andrade - <strong>JOSUÉ 1:9</strong>
 </footer>
 
 <script src="app.js"></script>
