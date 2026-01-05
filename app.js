@@ -1,5 +1,12 @@
-const calendarData = [
-  // JANEIRO
+/************************************
+ * DADOS DO CALENDÁRIO (POR TRIMESTRE)
+ ************************************/
+const calendarData = {
+  t1: {
+    title: "1º Trimestre",
+    theme: "A Criação e a Formação do Povo de Deus",
+    months: ["Janeiro", "Fevereiro", "Março"],
+    days: [
   { d: "05/01", t: "Gn 1–3" },
   { d: "06/01", t: "Gn 4–7" },
   { d: "07/01", t: "Gn 8–11" },
@@ -7,6 +14,7 @@ const calendarData = [
   { d: "09/01", t: "Gn 16–19" },
   { d: "10/01", t: "Gn 20–23" },
   { d: "11/01", t: "Meditar", m: true },
+
   { d: "12/01", t: "Gn 24–26" },
   { d: "13/01", t: "Gn 27–29" },
   { d: "14/01", t: "Gn 30–32" },
@@ -14,6 +22,7 @@ const calendarData = [
   { d: "16/01", t: "Gn 37–40" },
   { d: "17/01", t: "Gn 41–43" },
   { d: "18/01", t: "Meditar", m: true },
+
   { d: "19/01", t: "Gn 44–47" },
   { d: "20/01", t: "Gn 48–50" },
   { d: "21/01", t: "Jó 1–4" },
@@ -21,6 +30,7 @@ const calendarData = [
   { d: "23/01", t: "Jó 9–12" },
   { d: "24/01", t: "Jó 13–16" },
   { d: "25/01", t: "Meditar", m: true },
+
   { d: "26/01", t: "Jó 17–20" },
   { d: "27/01", t: "Jó 21–24" },
   { d: "28/01", t: "Jó 25–28" },
@@ -29,6 +39,8 @@ const calendarData = [
   { d: "31/01", t: "Jó 37–40" },
 
   // FEVEREIRO
+  { d: "01/02", t: "Meditar", m: true },
+
   { d: "02/02", t: "Jó 41–42" },
   { d: "03/02", t: "Êx 1–4" },
   { d: "04/02", t: "Êx 5–8" },
@@ -58,6 +70,7 @@ const calendarData = [
   { d: "28/02", t: "Nm 16–18" },
 
   // MARÇO
+  { d: "01/03", t: "Meditar", m: true },
   { d: "02/03", t: "Nm 19–21" },
   { d: "03/03", t: "Nm 22–24" },
   { d: "04/03", t: "Nm 25–27" },
@@ -86,13 +99,25 @@ const calendarData = [
   { d: "27/03", t: "Jz 1–3" },
   { d: "28/03", t: "Jz 4–6" },
   { d: "29/03", t: "Meditar", m: true },
+  { d: "30/03", t: "Jz 7–9" },
+  { d: "31/03", t: "Jz 10–12" },
+    ]
+  },
 
-  // ABRIL
+  t2: {
+    title: "2º Trimestre",
+    theme: "Conquista, Reino e Profetas",
+    months: ["Abril", "Maio", "Junho"],
+    days: [
+  // =========================
+  // 2º TRIMESTRE – ABRIL
+  // =========================
   { d: "01/04", t: "Jz 13–15" },
   { d: "02/04", t: "Jz 16–18" },
   { d: "03/04", t: "Jz 19–21" },
   { d: "04/04", t: "Rt 1–4" },
   { d: "05/04", t: "Meditar", m: true },
+
   { d: "06/04", t: "1Sm 1–4" },
   { d: "07/04", t: "1Sm 5–8" },
   { d: "08/04", t: "1Sm 9–12" },
@@ -100,6 +125,7 @@ const calendarData = [
   { d: "10/04", t: "1Sm 17–20" },
   { d: "11/04", t: "1Sm 21–24" },
   { d: "12/04", t: "Meditar", m: true },
+
   { d: "13/04", t: "1Sm 25–28" },
   { d: "14/04", t: "1Sm 29–31" },
   { d: "15/04", t: "2Sm 1–4" },
@@ -107,6 +133,7 @@ const calendarData = [
   { d: "17/04", t: "2Sm 9–12" },
   { d: "18/04", t: "2Sm 13–16" },
   { d: "19/04", t: "Meditar", m: true },
+
   { d: "20/04", t: "2Sm 17–20" },
   { d: "21/04", t: "2Sm 21–24" },
   { d: "22/04", t: "1Rs 1–4" },
@@ -114,6 +141,7 @@ const calendarData = [
   { d: "24/04", t: "1Rs 9–11" },
   { d: "25/04", t: "Pv 1–4" },
   { d: "26/04", t: "Meditar", m: true },
+
   { d: "27/04", t: "Pv 5–8" },
   { d: "28/04", t: "Pv 9–12" },
   { d: "29/04", t: "Pv 13–16" },
@@ -194,9 +222,15 @@ const calendarData = [
   { d: "28/06", t: "Meditar", m: true },
   { d: "29/06", t: "Jr 29–32" },
   { d: "30/06", t: "Jr 33–36" },
+    ]
+  },
 
-
-// =========================
+  t3: {
+    title: "3º Trimestre",
+    theme: "Exílio e a Chegada do Salvador",
+    months: ["Julho", "Agosto", "Setembro"],
+    days: [
+      // =========================
   // 3º TRIMESTRE – JULHO
   // =========================
   { d: "01/07", t: "Jr 37–40" },
@@ -311,9 +345,16 @@ const calendarData = [
 
   { d: "28/09", t: "Mt 14–16" },
   { d: "29/09", t: "Mt 17–19" },
-  { d: "30/09", t: "Mt 20–22" },
+  { d: "30/09", t: "Mt 20–22" }
+    ]
+  },
 
-// =========================
+  t4: {
+    title: "4º Trimestre",
+    theme: "Redenção e Glória",
+    months: ["Outubro", "Novembro", "Dezembro"],
+    days: [
+      // =========================
   // 4º TRIMESTRE – OUTUBRO
   // =========================
   { d: "01/10", t: "Mt 23–25" },
@@ -355,6 +396,7 @@ const calendarData = [
   // =========================
   // 4º TRIMESTRE – NOVEMBRO
   // =========================
+  { d: "01/11", t: "Meditar", m: true },
   { d: "02/11", t: "Cl 1–4" },
   { d: "03/11", t: "Fm; Ef 1–3" },
   { d: "04/11", t: "1Tm 1–6" },
@@ -427,46 +469,26 @@ const calendarData = [
   { d: "29/12", t: "Ap 16–18" },
   { d: "30/12", t: "Ap 19–20" },
   { d: "31/12", t: "Ap 21–22" }
-];
+    ]
+  }
+};
 
-const calendar = document.getElementById("calendar");
+/************************************
+ * ELEMENTOS DA TELA
+ ************************************/
+const calendarEl = document.getElementById("calendar");
+const homeEl = document.getElementById("home");
+const trimesterEl = document.getElementById("trimesterView");
+const titleEl = document.getElementById("trimesterTitle");
+const themeEl = document.getElementById("trimesterTheme");
 
-function renderCalendar() {
-  calendar.innerHTML = "";
-  const done = JSON.parse(localStorage.getItem("doneDays") || "{}");
-
-  calendarData.forEach((day, i) => {
-    const div = document.createElement("div");
-    div.className = "day";
-    if (day.m) div.classList.add("meditar");
-    if (done[i]) div.classList.add("done");
-
-    div.innerHTML = `<strong>${day.d}</strong><br>${day.t}`;
-    div.onclick = () => toggleDay(i);
-
-    calendar.appendChild(div);
-  });
-
-  updateProgress();
-}
-
-function toggleDay(i) {
-  const done = JSON.parse(localStorage.getItem("doneDays") || "{}");
-  done[i] = !done[i];
-  localStorage.setItem("doneDays", JSON.stringify(done));
-  renderCalendar();
-}
-
-function updateProgress() {
-  const done = JSON.parse(localStorage.getItem("doneDays") || "{}");
-  const total = calendarData.length;
-  const completed = Object.values(done).filter(v => v).length;
-  document.getElementById("progressText").innerText =
-    `Progresso: ${completed} de ${total} dias concluídos`;
-}
-
+/************************************
+ * USUÁRIO
+ ************************************/
 function saveUser() {
-  const name = document.getElementById("username").value;
+  const name = document.getElementById("username").value.trim();
+  if (!name) return;
+
   localStorage.setItem("user", name);
   loadUser();
 }
@@ -479,5 +501,84 @@ function loadUser() {
   }
 }
 
+/************************************
+ * NAVEGAÇÃO
+ ************************************/
+function openTrimester(key) {
+  localStorage.setItem("currentTrimester", key);
+
+  homeEl.style.display = "none";
+  trimesterEl.style.display = "block";
+
+  const t = calendarData[key];
+  titleEl.innerText = t.title;
+  themeEl.innerText = t.theme;
+
+  renderCalendar(key);
+}
+
+function goHome() {
+  trimesterEl.style.display = "none";
+  homeEl.style.display = "block";
+}
+
+/************************************
+ * CALENDÁRIO
+ ************************************/
+function renderCalendar(trimesterKey) {
+  calendarEl.innerHTML = "";
+
+  const days = calendarData[trimesterKey].days;
+  const done = JSON.parse(localStorage.getItem("doneDays") || "{}");
+
+  days.forEach(day => {
+    const div = document.createElement("div");
+    div.className = "day";
+
+    if (day.m) div.classList.add("meditar");
+    if (done[day.d]) div.classList.add("done");
+
+    div.innerHTML = `<strong>${day.d}</strong><br>${day.t}`;
+
+    div.onclick = () => toggleDay(day.d, trimesterKey);
+
+    calendarEl.appendChild(div);
+  });
+
+  updateProgress(trimesterKey);
+}
+
+function toggleDay(dateKey, trimesterKey) {
+  const done = JSON.parse(localStorage.getItem("doneDays") || "{}");
+  done[dateKey] = !done[dateKey];
+  localStorage.setItem("doneDays", JSON.stringify(done));
+  renderCalendar(trimesterKey);
+}
+
+/************************************
+ * PROGRESSO
+ ************************************/
+function updateProgress(trimesterKey) {
+  const done = JSON.parse(localStorage.getItem("doneDays") || "{}");
+  const days = calendarData[trimesterKey].days;
+
+  const total = days.length;
+  const completed = days.filter(d => done[d.d]).length;
+
+  const progressText = document.getElementById("progressText");
+  if (progressText) {
+    progressText.innerText =
+      `Progresso: ${completed} de ${total} dias concluídos`;
+  }
+}
+
+/************************************
+ * INICIALIZAÇÃO
+ ************************************/
 loadUser();
-renderCalendar();
+
+const lastTrimester = localStorage.getItem("currentTrimester");
+if (lastTrimester && calendarData[lastTrimester]) {
+  openTrimester(lastTrimester);
+   }
+      
